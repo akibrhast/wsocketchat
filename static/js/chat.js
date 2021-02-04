@@ -1,7 +1,7 @@
 /** Client-side of groupchat. */
 
-// const urlParts = document.URL.split("/");
-// const roomName = urlParts[urlParts.length - 1];
+const urlParts = document.URL.split("/");
+const roomName = urlParts[urlParts.length - 1];
 var HOST = location.origin.replace(/^http/, 'ws')
 
 const ws = new WebSocket(`${HOST}/chat/${roomName}`);
