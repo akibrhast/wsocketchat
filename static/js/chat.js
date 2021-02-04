@@ -1,8 +1,10 @@
 /** Client-side of groupchat. */
 
-const urlParts = document.URL.split("/");
-const roomName = urlParts[urlParts.length - 1];
-const ws = new WebSocket(`ws://localhost:3000/chat/${roomName}`);
+// const urlParts = document.URL.split("/");
+// const roomName = urlParts[urlParts.length - 1];
+var HOST = location.origin.replace(/^http/, 'ws')
+
+const ws = new WebSocket(`${HOST}/chat/${roomName}`);
 
 
 const name = prompt("Username?");
